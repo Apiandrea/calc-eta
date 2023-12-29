@@ -81,7 +81,7 @@ class Person:
         age = today.year-self.birthdate.year
         return age
 
-image = Image.open("logo.png")
+image = Image.open("images/logo.png")
 image.thumbnail((300, 300))
 photo = ImageTk.PhotoImage(image)
 label_image = tk.Label(image = photo)
