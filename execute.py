@@ -7,6 +7,11 @@ window.geometry("360x620")
 window.title(" Calcola Età ")
 window.configure(background="white")
 
+# SETTING THE ICON
+ico = Image.open("images/favicon.ico")
+photo = ImageTk.PhotoImage(ico)
+window.wm_iconphoto(False, photo)
+
 # INDICHIAMO CHE L'UTENTE NON PUO' RIDIMENSIONARE LA FINESTRA
 window.resizable(False, False)
 
@@ -33,12 +38,14 @@ nameEntry.grid(column = 1, row = 1)
 
 yearEntry = tk.Entry()
 yearEntry.grid(column = 1, row = 2)
+
 monthEntry = tk.Entry()
 monthEntry.grid(column = 1, row = 3)
 
 dateEntry = tk.Entry()
 dateEntry.grid(column = 1, row = 4)
 
+nameEntry.insert(0, "Insert your name!")
 
 # FUNCTION TO GET THE INPUT 
 def getInput():
@@ -85,7 +92,5 @@ image = Image.open("images/logo.png")
 image.thumbnail((300, 300))
 photo = ImageTk.PhotoImage(image)
 label_image = tk.Label(image = photo)
-label_image.grid(column = 1, row = 0, sticky="S")
+label_image.grid(column = 1, row = 0)
 window.mainloop()
-
-
